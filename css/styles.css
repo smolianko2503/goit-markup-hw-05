@@ -644,12 +644,16 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
   background-color: #f5f4fa;
-  padding: 4px;
+  padding-top: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-bottom: 6px;
   border-radius: 4px;
   border: none;
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .btn:hover,
@@ -674,9 +678,21 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list-item:hover,
-.portfolio-list-item:focus {
+
+.portfolio-list-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.portfolio-list-link:hover,
+.portfolio-list-link:focus {
   box-shadow: 1px 4px 4px rgba(175, 177, 184, 1);
+}
+
+.portfolio-list-link:hover .portfolio-overlay,
+.portfolio-list-link:focus .portfolio-overlay {
+  transform: translateY(0);
 }
 
 .portfolio-thumb {
@@ -699,9 +715,6 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list-item:hover .portfolio-overlay {
-  transform: translateY(0);
-}
 
 .portfolio-overlay-desc {
   font-weight: 400;
